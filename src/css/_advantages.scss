@@ -1,0 +1,107 @@
+.bg-banner {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    width: 100%;
+    height: 520px;
+    background-size: cover;
+    background-image: url("img/advantages/banner.png");
+
+    @media (max-width: 1024px) {
+        height: 400px;
+    }
+    @media (max-width: 768px) {
+        background-image: none;
+    }
+}
+
+.advantages {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    @media (max-width: 480px) {
+        padding: 0;
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+            
+        @media (max-width: 768px) {
+            align-items: center;
+        }
+        @media (max-width: 480px) {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        img {
+            width: 50%;
+            height: 100%;
+            @media (max-width: 480px) {
+                width: 100%;
+                align-self: flex-end;
+                order: 1;
+            }
+        }
+
+        .info {
+            margin: auto 0;
+            margin-left: 70px;
+            
+            @media (max-width: 768px) {
+                margin-left: 30px;
+            }
+            @media (max-width: 480px) {
+                display: flex;
+                flex-direction: column;
+                margin-left: 0;
+            }
+
+
+            p {
+                margin: 40px 0 45px 0;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 27px;
+                color: $main-color;
+                
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                    margin: 10px 0;
+                }
+            }
+
+            .button__advantages {
+                background-color: $secondary-color;
+            }
+        }
+    }
+
+    &-slider {
+        display: flex;
+        flex-direction: row;
+        margin: 20px auto 20px 300px;
+        width: fit-content;
+
+        @media (max-width: 768px) {
+            margin: 20px auto 20px 60px;
+        }
+        @media (max-width: 480px) {
+            margin: 20px auto;
+        }
+    
+        .page {
+            padding: 0 20px;
+            font-family: 'Prata';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: $dark-color;
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.footer {
+    background-color: $brown-color;
+    padding: 70px 0;
+
+    @media (max-width: 768px) {
+        padding: 40px 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .bottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            color: $white-color;
+            column-gap: 80px;
+    
+            @media (max-width: 1024px) {
+                column-gap: 40px;
+            }
+            @media (max-width: 768px) {
+                flex-direction: column;
+                row-gap: 20px;
+            }
+    
+            &__item {
+                .title {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    
+                    &-title {
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 16px;
+                        letter-spacing: 0.07em;
+                        text-transform: uppercase;
+    
+                        @media (max-width: 768px) {
+                            font-size: 10px;
+                        }
+                    }
+    
+                    img {
+                        display: none;
+                        
+                        @media (max-width: 768px) {
+                            display: inline-block;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                img {
+                    margin-top: -15px;
+                }
+                &-info {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 15px;
+                    margin-top: 25px;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 14px;
+    
+                    @media (max-width: 768px) {
+                        display: none;
+                        font-size: 10px;
+                    }
+    
+                    a {
+                        text-decoration: none;
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+
+        .contacts__right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            row-gap: 20px;
+            
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+
+    }
+}

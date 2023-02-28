@@ -1,0 +1,117 @@
+.popular {
+
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 90px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        align-self: center;
+
+        @media (max-width: 480px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .goods {
+        &-helpers {
+            display: flex;
+            justify-content: flex-end;
+
+            a {
+                text-decoration: none;
+                color: $main-color;
+                border-bottom: 1px solid $grey-color;
+                cursor: pointer;
+            }
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__button {
+            display: none;
+
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
+    }
+}
+
+.item-3 {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+.item-2 {
+    @media (max-width: 480px) {
+        display: none;
+    }
+}
+
+.item {
+    font-weight: 700;
+    width: 33%;
+    padding: 40px;
+
+    @media (max-width: 480px) {
+        padding: 20px;
+    }
+
+    &-header {
+        color: $dark-color;
+
+        &__name {
+            font-family: 'Playfair Display';
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            font-style: normal;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        &__price {
+            display: flex;
+            flex-direction: row;
+            font-size: 12px;
+            font-family: 'Prata';
+            font-style: normal;
+            font-weight: 400;
+        }
+    }
+
+    &-img {
+        width: 100%;
+        border: 1px solid $grey-color;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &-footer {
+        a {
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            text-decoration: none;
+            color: $text-color;
+
+            p {
+                font-family: 'Prata';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                margin-left: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}
